@@ -25,7 +25,7 @@ techBlog.init(
         sequelize,
         timestamps: false,
         underscored: true,
-        modelName: 'album'
+        modelName: 'blog'
     }
 );
 

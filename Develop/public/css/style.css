@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+  }
+  
+  body {
+    background: linear-gradient(to bottom right, black, #07e782);
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flexbox;
+  }
+  
+  .login-form {
+    width: max-content;
+    white-space: 100px;
+  }
+  
+  #card {
+    width: 300%
+  }
+  
+  .email-login{
+    margin-left: 10px;
+  }
+  
+  .password-login {
+    margin-left: 10px;
+  }
+  
+  .inner-button{
+  margin-left: 100%;
+  }
+  
+  h1{
+  padding-left: 2%;
+  
+  }
+  
+  
+  .nav button{
+  /* background-color:  #101010; */
+  width: 100pt;
+  height: 25pt;
+  border: none;
+  background-color: transparent; 
+  text-decoration: none;
+  }
+  
+  .dropdown {
+  display: inline-block;
+  position: relative;
+  }
+  
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  nav-right: auto;
+  padding-left: 5pt;
+  width: 200%;
+  overflow: auto;
+  background-color: #daeba6;
+  /* margin-left: 650%; */
+  z-index: 1;
+  /* margin-left: 650%; */
+  z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+  display: block;
+  }
+  .dropdown-content a {
+  display: block;
+  color: #00FFFF;
+  padding: 5px;
+  text-decoration: none;
+  }
+  .dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #00FFFF;
+  }
+  
+  .dropdown-content button{
+  margin-left: 0%;
+  background-color: #00FFFF;
+  color: #FFFFFF;
+  font-size: 12pt;
+  }

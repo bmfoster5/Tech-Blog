@@ -1,5 +1,13 @@
-<div class="cards">
-    <div class="banner">
-        <h4><a class="link" href="/dashboard/edit/{{id}}">{{title}}</a></h4>
+<h2>Your Reviews</h2>
+<div class="row justify-content-center">
+    {{#each albums as |album|}}
+    <div class="card col-sm-3 m-3 p-3" style="width: 20%">
+        <h4><a class="link" href="/blog/{{techBlog.id}}"></a></h4>
+        <div class="card-body"><h5 class="card-title">{{techBlog.title}}</h5>
+            <p class="card-text">{{techBlog.comment}}</p>
+        </div>    
     </div>
+    {{/each}}
 </div>
+
+<button type="button" class="btn btn-light"><a class="link" href="/new-post">+ New Review</a></button>
