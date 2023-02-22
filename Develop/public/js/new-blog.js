@@ -5,15 +5,15 @@
     event.preventDefault();
   
     const title = document.querySelector('#title').value.trim();
-    const comment = document.querySelector('#content').value.trim();
+    const comment = document.querySelector('#comment').value.trim();
     
     console.log(title, comment);
   
     if (title && comment) {
-      const response = await fetch('/api/posts/new-post', {
+      const response = await fetch('/api/blogs/new-post', {
         method: 'POST',
         credentials: 'include',    
-        body: JSON.stringify({ title, comment, id }),
+        body: JSON.stringify({ title, comment }),
         headers: { 'Content-Type': 'application/json' },
       });
   

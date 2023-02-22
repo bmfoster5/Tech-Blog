@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Tech Blog</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='/public/css/style.css'>
+    <link rel='stylesheet' href='/css/style.css'>
    
 </head>
 <body>
@@ -15,11 +15,12 @@
             <nav>
                 <a href="/">Home</a>
                 <a href="/dashboard">Your Blog Dashboard</a>
-                {{#if loggedIn}}
+                {{!-- {{#if loggedIn}} --}}
                 <a id="logout" href="#">Logout</a>
-                {{else}}
+                {{!-- {{else}} --}}
                  <a href="/login">Login</a>
-                 {{/if}}
+                 <a href="/signup">Sign Up</a>
+                 {{!-- {{/if}} --}}
             </nav>
       </div>
       <h1>Tech Blog</h1>
@@ -29,9 +30,9 @@
 
  </div>
     
-      {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
+      {{!-- {{#if loggedIn}} --}}
+  <script src="/js/logout.js"></script>
+  {{!-- {{/if}} --}}
 
 </body>
 </html>

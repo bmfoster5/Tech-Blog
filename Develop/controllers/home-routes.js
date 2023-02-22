@@ -3,11 +3,13 @@ const { techBlog, Users } = require('../models/');
 const withAuth = require('../utils/auth');
 
 // GET Route for Homepage
-router.get('/', withAuth, (req, res) => {
+
+//Change tech blog to Blog
+router.get('/', async (req, res) => {
   try {
     const techBlogData = await techBlog.findAll({
       limit: 10,
-      order: [['id', 'DSC']]
+      order: [['id', 'DESC']]
     });
 
     const blog = techBlogData.map((project) => project.get({ plain: true }));
@@ -82,7 +84,7 @@ router.delete('/blogs/:id', withAuth, async (req, res) => {
 
     //if no id found gives 404
     if (!blogData) {
-      res.status(404).json({'No review found with that id!'});
+      res.status(404).json('No review found with that id!');
       return;
     }
 
@@ -94,13 +96,27 @@ router.delete('/blogs/:id', withAuth, async (req, res) => {
 });
 
 // Redirects users if already logged in
-router.get('/login', withAuth, (req, res) => {
+router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-      res.redirect('/dashboard');
+      res.redirect('/newBlog');
       return;
     }
   
     res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/newBlog');
+    return;
+  }
+
+  res.render('signup');
+});
+
+router.get('/newBlog', (req, res) => {
+  
+  res.render('new-blog');
 });
 
 module.exports = router;

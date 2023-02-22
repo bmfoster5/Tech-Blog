@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Blog = require('../../models/');
+const { Blog } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
 // GET route for showing all blogs
@@ -34,7 +34,6 @@ router.get('/', withAuth, async (req, res) => {
       const blogData = await Blog.create({
         title: req.body.title,
         comment: req.body.comment,
-        id: req.session.userId
       })
 
       console.log(blogData);
