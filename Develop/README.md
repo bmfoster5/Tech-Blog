@@ -21,6 +21,6 @@ Welcome to my personal tech-blog application! I have created a CMS-style blog si
   - Run the seed data
   - Source the schema
   - Please run ```npm start``` to run the server
-  - Please visit [Heroku](https:///) to view our deployed application
+  - Please visit [Heroku](https://brandon-tech-blog.herokuapp.com/) to view our deployed application
 
 ## License

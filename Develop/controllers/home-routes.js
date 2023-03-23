@@ -23,7 +23,6 @@ router.get('/', async (req, res) => {
 // GET Route for showing all blogs created
 router.get('/blogs', withAuth, async (req, res) => {
   try {
-    // variable for getting all albums reviewed from Model
     const blogsCreated = await techBlog.findAll({
       order: [['title', 'ASC']],
     });
